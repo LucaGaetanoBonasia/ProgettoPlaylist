@@ -38,7 +38,7 @@ namespace Playlist
             set { _durata = value; }
         }
 
-        public string toString()
+        public override toString()
         {
             return (_titolo + _autore + _durata);
         }
