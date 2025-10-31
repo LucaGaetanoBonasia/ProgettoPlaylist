@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TextBlock x:Name="CD" HorizontalAlignment="Left" Height="42" Margin="68,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" TextAlignment="Center" Foreground="#FFF9FDF8" Background="#FFFD0101" FontSize="24"><Run Language="it-it" Text="CREA UN CD"/></TextBlock>
+        <TextBlock x:Name="Brani" HorizontalAlignment="Left" Height="42" Margin="443,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" TextAlignment="Center" Foreground="#FFF9FDF8" Background="#FFFD0101" FontSize="24" Text="AGGIUNGI UN BRANO"/>
+        <ListBox x:Name="Lista_CD" HorizontalAlignment="Left" Height="82" Margin="68,90,0,0" VerticalAlignment="Top" Width="279" d:ItemsSource="{d:SampleData ItemCount=5}"/>
 
     </Grid>
 </Window>
