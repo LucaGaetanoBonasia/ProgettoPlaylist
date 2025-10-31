@@ -19,7 +19,7 @@ namespace Playlist
             _titolo = titolo;
             _durata = durata;
         }
-
+            
         public string Titolo
         {
             get { return _autore; }
