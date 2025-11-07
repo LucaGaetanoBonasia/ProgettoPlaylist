@@ -43,7 +43,7 @@ namespace Playlist
             double totale = 0;
             foreach (Brani b in _brani)
             {
-                totale += b.GetDurata();
+                totale += b.Durata;
             }
             return totale;
         }
