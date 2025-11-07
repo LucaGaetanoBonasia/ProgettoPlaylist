@@ -7,6 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TextBlock x:Name="CD" HorizontalAlignment="Left" Height="42" Margin="68,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" TextAlignment="Center" Foreground="#FFF9FDF8" Background="#FFFD0101" FontSize="24"><Run Language="it-it" Text="CREA UN CD"/></TextBlock>
+        <TextBlock x:Name="Brani" HorizontalAlignment="Left" Height="42" Margin="443,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" TextAlignment="Center" Foreground="#FFF9FDF8" Background="#FFFD0101" FontSize="24" Text="AGGIUNGI UN BRANO"/>
+        <ListBox x:Name="Lista_CD" HorizontalAlignment="Left" Height="82" Margin="68,90,0,0" VerticalAlignment="Top" Width="279" d:ItemsSource="{d:SampleData ItemCount=5}" />
+        <Label x:Name="Label_Titolo" Content="TITOLO:" HorizontalAlignment="Left" Height="36" Margin="443,90,0,0" VerticalAlignment="Top" Width="94" Background="White"/>
+        <Label x:Name="Label_Autore" Content="AUTORE:" HorizontalAlignment="Left" Height="36" Margin="443,136,0,0" VerticalAlignment="Top" Width="94" Background="#FFFCFDFC"/>
+        <Label x:Name="Label_Durata" Content="DURATA:" HorizontalAlignment="Left" Height="36" Margin="443,181,0,0" VerticalAlignment="Top" Width="94" Background="#FFFCFFFC"/>
+        <TextBox x:Name="Titolo" HorizontalAlignment="Left" Margin="537,99,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="Autore" HorizontalAlignment="Left" Margin="537,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="Durata" HorizontalAlignment="Left" Margin="537,145,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <Button x:Name="Aggiunta_Brano" Content="AGGIUNGI BRANO AL CD" HorizontalAlignment="Left" Height="46" Margin="453,230,0,0" VerticalAlignment="Top" Width="251" Click="Button_Aggiungi_Brani"/>
+        <Button Content="Crea_CD" HorizontalAlignment="Left" Height="57" Margin="68,286,0,0" VerticalAlignment="Top" Width="258" Click="Button_Crea_CD"/>
+        <Label x:Name="Label_Titolo_CD" Content="TITOLO DEL :" HorizontalAlignment="Left" Height="36" Margin="72,188,0,0" VerticalAlignment="Top" Width="94" Background="White"/>
+        <TextBox x:Name="Titolo_CD" HorizontalAlignment="Left" Margin="166,197,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <Label x:Name="Label_Autore_Cd" Content="Autore del CD:" HorizontalAlignment="Left" Height="36" Margin="68,229,0,0" VerticalAlignment="Top" Width="94" Background="White"/>
+        <TextBox x:Name="Autore_CD" HorizontalAlignment="Left" Margin="165,233,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.124"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
 
     </Grid>
 </Window>
