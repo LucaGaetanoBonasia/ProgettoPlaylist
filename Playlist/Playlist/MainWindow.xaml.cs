@@ -22,14 +22,11 @@ namespace Playlist
             InitializeComponent();
         }
 
-      
-
         private void Button_Aggiungi_Brani(object sender, RoutedEventArgs e)
         {
-            Brani brano = new Brani(Titolo.Text, Autore.Text,double.Parse(Durata.Text));
-            Lista_CD.Items.Add(brano);
-
-
+            // Nota: sarebbe buona pratica validare Durata con double.TryParse
+            Brani brano = new Brani(Titolo.Text, Autore.Text, int.Parse(Durata.Text));
+            Lista_Brani.Items.Add(brano);
         }
 
         private void Button_Crea_CD(object sender, RoutedEventArgs e)
@@ -38,7 +35,9 @@ namespace Playlist
             {
                 CD cd = new CD(Titolo_CD.Text, Autore_CD.Text);
                 cd.AggiungiBrano((Brani)Lista_CD.Items[i]);
+                Lista_CD.Items.Add(cd);
             }
+            
         }
     }
 }

@@ -11,19 +11,19 @@ namespace Playlist
     {
         private string _titolo;
         private string _autore;
-        private double _durata;
+        private int _durata;
 
-        public Brani(string titolo, string autore, double durata)
+        public Brani(string titolo, string autore, int durata)
         {
             _autore = autore;
             _titolo = titolo;
             _durata = durata;
         }
-            
+
         public string Titolo
         {
-            get { return _autore; }
-            set { _autore = value; }
+            get { return _titolo; }
+            set { _titolo = value; }
         }
 
         public string Autore
@@ -32,15 +32,15 @@ namespace Playlist
             set { _autore = value; }
         }
 
-        public double Durata
+        public int Durata
         {
             get { return _durata; }
             set { _durata = value; }
         }
 
-        public override toString()
+        public override string ToString()
         {
-            return (_titolo + _autore + _durata);
+            return ($"Titolo:{_titolo} Autore:{_autore} Durata:{_durata} minut");
         }
 
         public bool shortSong(double durata)

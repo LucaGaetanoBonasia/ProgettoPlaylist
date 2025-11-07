@@ -30,9 +30,9 @@ namespace Playlist
         {
             _brani.Add(b);
         }
-        public double Durata()
+        public int Durata()
         {
-            double totale = 0;
+            int totale = 0;
             foreach (Brani b in _brani)
             {
                 totale += b.Durata;
