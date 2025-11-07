@@ -18,21 +18,13 @@ namespace Playlist
             _autore = autore;
             _brani = new List<Brani>();
         }
-        public string GetTitolo()
+        public string Titolo{get { return _titolo; }  set { _titolo = value; }}
+       
+        
+        public string Autore
         {
-            return _titolo;
-        }
-        public void SetTitolo(string titolo)
-        {
-            _titolo = titolo;
-        }
-        public string GetAutore()
-        {
-            return _autore;
-        }
-        public void SetAutore(string autore)
-        {
-            _autore = autore;
+            get { return _autore; }
+            set { _autore = value; }
         }
         public void AggiungiBrano(Brani b)
         {
