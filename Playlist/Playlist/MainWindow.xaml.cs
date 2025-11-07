@@ -20,5 +20,24 @@ namespace Playlist
         {
             InitializeComponent();
         }
+
+      
+
+        private void Button_Aggiungi_Brani(object sender, RoutedEventArgs e)
+        {
+            Brani brano = new Brani(Titolo.Text, Autore.Text,double.Parse(Durata.Text));
+            Lista_CD.Items.Add(brano);
+
+
+        }
+
+        private void Button_Crea_CD(object sender, RoutedEventArgs e)
+        {
+            for (int i = 0; i < Lista_CD.Items.Count; i++)
+            {
+                CD cd = new CD(Titolo_CD.Text, Autore_CD.Text);
+                cd.AggiungiBrano((Brani)Lista_CD.Items[i]);
+            }
+        }
     }
 }
